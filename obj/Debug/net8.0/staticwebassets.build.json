@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "2qDlFE35o9sMkYbFtqTwNrUEk4hbZLyINxTmu+UN1X0=",
+  "Source": "TesteMTP",
+  "BasePath": "_content/TesteMTP",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "TesteMTP\\wwwroot",
+      "Source": "TesteMTP",
+      "ContentRoot": "C:\\Users\\leo5d\\OneDrive\\Documentos\\MTP\\TesteMTP\\wwwroot\\",
+      "BasePath": "_content/TesteMTP",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\leo5d\\OneDrive\\Documentos\\MTP\\TesteMTP\\wwwroot\\css\\index.css",
+      "SourceId": "TesteMTP",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\leo5d\\OneDrive\\Documentos\\MTP\\TesteMTP\\wwwroot\\",
+      "BasePath": "_content/TesteMTP",
+      "RelativePath": "css/index.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\index.css"
+    },
+    {
+      "Identity": "C:\\Users\\leo5d\\OneDrive\\Documentos\\MTP\\TesteMTP\\wwwroot\\js\\Index.js",
+      "SourceId": "TesteMTP",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\leo5d\\OneDrive\\Documentos\\MTP\\TesteMTP\\wwwroot\\",
+      "BasePath": "_content/TesteMTP",
+      "RelativePath": "js/Index.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Index.js"
+    }
+  ]
+}
