@@ -16,15 +16,6 @@ namespace TesteMTP.Controllers
             _taskRepository = taskRepository;
         }
 
-        [HttpPost]
-        public IActionResult Add(TaskViewModel taskViewModel)
-        {
-            var tasks = new Models.Task(taskViewModel.Tasks, taskViewModel.IsCompleted);
-            _taskRepository.Add(tasks);
-
-            return Ok($"Tarefa " + $"'{tasks.Tasks}'" + " inserida na lista de tarefas!");
-        }
-
         [HttpGet]
         public IActionResult Get()
         {
@@ -32,24 +23,41 @@ namespace TesteMTP.Controllers
             return Ok(tasks);
         }
 
-        [HttpDelete("{task}")]
-        public IActionResult Delete(string task)
+        [HttpPost]
+        public IActionResult Add(TaskViewModel taskViewModel)
         {
-            try
-            {
-                _taskRepository.Delete(task);
-                return Ok("Tarefa excluída com sucesso.");
-            }
-            catch (InvalidOperationException ex)
-            {
-                return NotFound(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"Ocorreu um erro ao excluir a tarefa: {ex.Message}");
-            }
+            var tasks = new Models.Task(taskViewModel.Tasks, taskViewModel.IsCompleted);
+            _taskRepository.Add(tasks);
+            return Ok();
         }
 
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            var taskToDelete = _taskRepository.GetTaskById(id);
+
+            if (taskToDelete == null)
+            {
+                return NotFound("Tarefa não encontrada.");
+            }
+
+            _taskRepository.Delete(taskToDelete);
+            return Ok();
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult PutTask(int id)
+        {
+            var task = _taskRepository.GetTaskById(id);
+
+            if (task == null)
+            {
+                return NotFound("Tarefa não encontrada.");
+            }
+
+            _taskRepository.PutTask(task);
+            return Ok();
+        }
 
     }
 }

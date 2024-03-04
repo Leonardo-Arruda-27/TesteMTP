@@ -1,4 +1,49 @@
 ﻿@page
 @model TesteMTP.Pages.IndexModel
-@{
-}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="~/css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>To Do List</h1>
+
+        <!-- Abas de navegação -->
+        <div class="tabs">
+            <button id="cadastroTab" class="tablinks active" onclick="openTab(event, 'cadastro')">Cadastro de Tarefas</button>
+            <button id="listaTab" class="tablinks" onclick="openTab(event, 'lista')">Lista de Tarefas</button>
+        </div>
+
+        <div id="cadastro" class="tabcontent active" style="display: block">
+            <div class="input-container">
+                <input type="text" id="new-task" placeholder="Add new task">
+                <button onclick="addTask()"><i class="fas fa-plus"></i> Adicionar Tarefa</button>
+            </div>
+        </div>
+
+        <div id="lista" class="tabcontent">
+            <h2>Lista de Tarefas</h2>
+            <ul id="task-list">
+                @* Aqui mostra as tarefas incompletas *@
+            </ul>
+            <h2>Tarefas Completas</h2>
+            <ul id="completed-task-list">
+                @* Aqui mostra as tarefas completas *@
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="~/js/Index.js"></script>
+</body>
+</html>

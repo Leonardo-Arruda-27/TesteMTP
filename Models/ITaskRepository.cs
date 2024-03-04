@@ -2,8 +2,10 @@
 {
     public interface ITaskRepository
     {
+        List<Task> GetAll();
         void Add(Task task);
-        List<Models.Task> GetAll();
-        void Delete(string task);
+        void Delete(Task task);
+        void PutTask(Task task);
+        Task GetTaskById(int task);
     }
 }

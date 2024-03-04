@@ -1,2 +1,115 @@
 ﻿body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.tabs {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.tablinks {
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+
+.tablinks.active {
+    background-color: #0056b3;
+    border: 1px solid #0056b3;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.task-item {
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.task-item:hover {
+    background-color: #f2f2f2;
+}
+
+.completed-task {
+    text-decoration: line-through;
+}
+
+.task-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.task-actions button {
+    cursor: pointer;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.task-actions button:hover {
+    background-color: #ddd;
 }
